@@ -14,7 +14,7 @@
         <!-- Tablero de juego. -->
         <table id="tableroDeJuego" class="tableroDeJuego">
             <tr>
-                <td class="aspiradora"></td>
+                <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -139,28 +139,34 @@
             <div class="opt">
                 <h3>Nivel de dificultad</h3>
                 <div class="opt--nivel">
-                    <input type="radio" name="rbDif" id="opt-facil" checked="checked"><label for="opt-facil">FÁCIL (opción por defecto)</label>
+                    <input type="radio" name="rbDif" id="opt-facil" checked="checked"><label for="opt-facil">FÁCIL (Opción por defecto)</label>
                 </div>
                 <div class="opt--nivel">
-                    <input type="radio" name="rbDif" id="opt-medio"><label for="opt-medio">MEDIO</label>
+                    <input type="radio" name="rbDif" id="opt-medio" disabled><label for="opt-medio">MEDIO (No implementado)</label>
                 </div>
                 <div class="opt--nivel">
-                    <input type="radio" name="rbDif" id="opt-dificil"><label for="opt-dificil">DIFÍCIL</label>
+                    <input type="radio" name="rbDif" id="opt-dificil" disabled><label for="opt-dificil">DIFÍCIL (No implementado)</label>
                 </div>
             </div>
             <!-- Movimientos. -->
             <fieldset class="opt">
                 <legend>Movimientos</legend>
                 <div class="opt--container--movimientos">
-                    <div class="opt--movimientos" onclick="izquierda()">
+                    <div class="opt--movimientos  col-3" onclick="izquierda()">
                         <img src="img/mov-izq.PNG" alt="Izquierda">
                         <label>Izquierda</label>
                     </div>
-                    <div class="opt--movimientos" onclick="avanzar()">
-                        <img src="img/mov-frente.PNG"  alt="Avanzar()">
-                        <label>Avanzar</label>
+                    <div class="opt--movimientos  col-3">
+                       <div class="opt--movimientos opt--movimientos_arriba" onclick="arriba()">
+                           <img src="img/mov-arriba.PNG"  alt="Avanzar">
+                           <label>Arriba</label>
+                       </div>
+                        <div class="opt--movimientos  opt--movimientos_abajo" onclick="abajo()">
+                            <img src="img/mov-abajo.png" alt="Abajo">
+                        <label>Abajo</label>
+                        </div>
                     </div>
-                    <div class="opt--movimientos" onclick="derecha()">
+                    <div class="opt--movimientos  col-3" onclick="derecha()">
                         <img src="img/mov-dcha.PNG" alt="Derecha">
                         <label>Derecha</label>
                     </div>

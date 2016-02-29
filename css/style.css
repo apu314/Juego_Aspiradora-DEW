@@ -88,17 +88,30 @@ button {
 .opt--container--movimientos {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     width: 98%;
     justify-content: space-around;
     align-items: center;
 }
-    
+/* Imágenes que controlan los movimientos. */
+.izquierda, .ariba, .derecha, .abajo {
+    background-repeat: no-repeat;
+    background-position: center;
+    /*background-size: 25px 25px;*/
+    background-size:contain;
+}
+.izquierda { background-image: url(../img/mov-izq.PNG);}
+.arriba { background-image: url(../img/mov-arriba.PNG);}
+.derecha { background-image: url(../img/mov-dcha.PNG);}
+.abajo { background-image: url(../img/mov-abajo.png);}
+
     .opt--movimientos {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content:space-around;
-        align-self: baseline;
+        align-self: center;
+        align-items: center;
     }
     
         .opt--movimientos img {
