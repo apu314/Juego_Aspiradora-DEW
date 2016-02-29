@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego Aspiradora - UD05-UD06-P01</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script type="text/javascript" src="js/juego.js"></script>
+</head>
+<body onLoad="inicia()">
+    <header class="container">
+        <h1 class="container--item"><a href="index.html">Juego Aspiradora</a></h1>
+    </header>
+    <main>
+        <!-- Tablero de juego. -->
+        <table id="tableroDeJuego" class="tableroDeJuego">
+            <tr>
+                <td class="aspiradora"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <aside class="container--opt">
+            <!-- Opciones del juego. -->
+            <div class="opt">
+                <h3>Nivel de dificultad</h3>
+                <div class="opt--nivel">
+                    <input type="radio" name="rbDif" id="opt-facil" checked="checked"><label for="opt-facil">FÁCIL (opción por defecto)</label>
+                </div>
+                <div class="opt--nivel">
+                    <input type="radio" name="rbDif" id="opt-medio"><label for="opt-medio">MEDIO</label>
+                </div>
+                <div class="opt--nivel">
+                    <input type="radio" name="rbDif" id="opt-dificil"><label for="opt-dificil">DIFÍCIL</label>
+                </div>
+            </div>
+            <!-- Movimientos. -->
+            <fieldset class="opt">
+                <legend>Movimientos</legend>
+                <div class="opt--container--movimientos">
+                    <div class="opt--movimientos" onclick="izquierda()">
+                        <img src="img/mov-izq.PNG" alt="Izquierda">
+                        <label>Izquierda</label>
+                    </div>
+                    <div class="opt--movimientos" onclick="avanzar()">
+                        <img src="img/mov-frente.PNG"  alt="Avanzar()">
+                        <label>Avanzar</label>
+                    </div>
+                    <div class="opt--movimientos" onclick="derecha()">
+                        <img src="img/mov-dcha.PNG" alt="Derecha">
+                        <label>Derecha</label>
+                    </div>
+                </div>
+            </fieldset>
+            <!-- Planificación de movimientos. -->
+            <table class="tableroMovimientos">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <div class="opt opt--botones">
+                <button onclick="mover()">Mover</button>
+                <button onclick="reiniciar()">Reiniciar</button>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <small>© Copyright 2016, <a href="http://apu314.com">Adolfo Unturbe - apu314.com</a></small>
+    </footer>
+</body>
+</html>
