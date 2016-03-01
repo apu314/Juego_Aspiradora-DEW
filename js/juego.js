@@ -102,7 +102,6 @@ function btnMover(posi) {
         }
     }
 }
-*/
 
 function reiniciar() {
     document.location.href = document.location.href;
