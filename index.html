@@ -152,28 +152,28 @@
             <fieldset class="opt">
                 <legend>Movimientos</legend>
                 <div class="opt--container--movimientos">
-                    <div class="opt--movimientos  col-3" onclick="izquierda()">
+                    <div class="opt--movimientos  col-3" onclick="addMov('izquierda')">
                         <img src="img/mov-izq.PNG" alt="Izquierda">
                         <label>Izquierda</label>
                     </div>
                     <div class="opt--movimientos  col-3">
-                       <div class="opt--movimientos opt--movimientos_arriba" onclick="arriba()">
+                       <div class="opt--movimientos opt--movimientos_arriba" onclick="addMov('arriba')">
                            <img src="img/mov-arriba.PNG"  alt="Avanzar">
                            <label>Arriba</label>
                        </div>
-                        <div class="opt--movimientos  opt--movimientos_abajo" onclick="abajo()">
+                        <div class="opt--movimientos  opt--movimientos_abajo" onclick="addMov('abajo')">
                             <img src="img/mov-abajo.png" alt="Abajo">
                         <label>Abajo</label>
                         </div>
                     </div>
-                    <div class="opt--movimientos  col-3" onclick="derecha()">
+                    <div class="opt--movimientos  col-3" onclick="addMov('derecha')">
                         <img src="img/mov-dcha.PNG" alt="Derecha">
                         <label>Derecha</label>
                     </div>
                 </div>
             </fieldset>
             <!-- Planificación de movimientos. -->
-            <table class="tableroMovimientos">
+            <table id="tableroMovimientos" class="tableroMovimientos">
                 <tr>
                     <td></td>
                     <td></td>
@@ -216,7 +216,7 @@
                 </tr>
             </table>
             <div class="opt opt--botones">
-                <button onclick="mover()">Mover</button>
+                <button onclick="btnMover(0)">Mover</button>
                 <button onclick="reiniciar()">Reiniciar</button>
             </div>
         </aside>

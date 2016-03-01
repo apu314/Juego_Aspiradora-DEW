@@ -94,7 +94,7 @@ button {
     align-items: center;
 }
 /* Imágenes que controlan los movimientos. */
-.izquierda, .ariba, .derecha, .abajo {
+.izquierda, .arriba, .derecha, .abajo {
     background-repeat: no-repeat;
     background-position: center;
     /*background-size: 25px 25px;*/
